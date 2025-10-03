@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- index.html (en <head>) -->
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+</head>
+<body
+MINI BAR FIJA SUPERIOR -->
+<div id="mini-bar" class="mini-bar">
+    <a href="#inicio" class="mini-wrap" aria-label="Ir al inicio">
+    <!-- Subí tu logo como public/molgen.png o molgen.svg -->
+    <img src="public/molgen.png" alt="MolGen.AI" class="mini-logo" />
+    <span class="mini-name">MolGen.AI</span>
+    </a>
+</div>
+
+<!-- 🔒 Estilos inline (prioridad máxima). Cuando veas que funciona,
+    podés moverlos a style.css y borrar este <style>. -->
+<style>
+    #mini-bar{
+    position:fixed; top:0; left:0; right:0; height:56px;
+    background:#061B2E; border-bottom:1px solid #077DDD;
+    z-index:100000; /* por encima de todo */
+}
+    #mini-bar .mini-wrap{
+    max-width:1200px; height:100%; margin:0 auto; padding:0 20px;
+    display:flex; align-items:center; gap:10px; text-decoration:none;
+}
+    #mini-bar .mini-logo{ width:28px; height:auto; display:block; filter:drop-shadow(0 1px 4px rgba(1,221,255,.25)); }
+    #mini-bar .mini-name{
+    font:800 22px/1 "Figtree",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    background:linear-gradient(90deg,#01DDFF 0%, #6C7BFF 100%);
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+    letter-spacing:.2px;
+}
+  /* evita que la barra tape el contenido */
+    html body{ padding-top:56px; }
+
+@media (max-width:480px){
+    #mini-bar{ height:52px; }
+    html body{ padding-top:52px; }
+    #mini-bar .mini-logo{ width:24px; }
+    #mini-bar .mini-name{ font-size:20px; }
+    }
+</style>
+>
+
+
+
+<!-- 🧬 Sección 1: Hero -->
+    <header class="hero" id="inicio">
+    <div class="hero-content">
+    <div class="text">
+        <h1>Genera posibles medicamentos en segundos</h1>
+        <p>Potenciado por <span>IA</span></p>
+        <a href="#como-funciona" class="btn-secondary">Cómo funciona ↓</a>
+    </div>
+    <div class="image">
+        <img src="public/molecules.png" class="molecula" alt="Molécula" />
+    </div>
+    </div>
+    </header>
+
+
+<!-- ⚙️ Sección 2: Proceso con flechas -->
+<section class="flow" id="como-funciona">
+    <div class="flow-container">
+    <!-- Card 1 -->
+    <div class="flow-card">
+    <div class="img-wrap">
+        <img src="public/persona.png" alt="Persona" class="flow-img" />
+    </div>
+    <div class="bubble">El usuario ingresa su configuración</div>
+    </div>
+
+    <!-- Flecha 1 -->
+    <img src="public/flecha.png" alt="Flecha" class="flow-arrow" />
+
+    <!-- Card 2 -->
+    <div class="flow-card">
+    <div class="img-wrap">
+        <img src="public/aleta.png" alt="Aleta" class="flow-img" />
+    </div>
+    <div class="bubble">Generación de la molécula</div>
+    </div>
+
+    <!-- Flecha 2 -->
+    <img src="public/flecha.png" alt="Flecha" class="flow-arrow" />
+
+    <!-- Card 3 -->
+    <div class="flow-card">
+    <div class="img-wrap">
+        <img src="public/molecula.png" alt="Molécula" class="flow-img" />
+    </div>
+    <div class="bubble">Resultado</div>
+    </div>
+</div>
+</section>
+
+
+<!-- 📊 Sección 3: Datos sobre diabetes -->
+<section class="diabetes" id="diabetes">
+    <div class="left">
+    <div class="chart-block">
+    <h2 class="chart-title">
+    Años de vida ajustados por discapacidad debido a la diabetes
+    </h2>
+    <!-- ⚠️ Imagen: poné tu archivo en /public con este nombre -->
+    <img src="public/diabetes-graph.png" alt="Gráfico de diabetes" class="chart-img" />
+    </div>
+</div>
+    <!-- 📎 Bloque derecho (título grande + tarjeta azul) -->
+<div class="right">
+    <h2 class="right-title">¿Cuántas personas son afectadas por la diabetes?</h2>
+
+    <div class="info-card">
+    <p>
+    Los diagnósticos de diabetes tipo II siguen aumentando.
+    Se estima que para 2040 aumenten un 30%.
+    </p>
+    </div>
+</div>
+
+    </div>
+</section>
+
+<!-- 🤝 Sección 4: Únete al proyecto -->
+<!-- 🧩 Sección 4: Join / Community -->
+<section class="join" id="unite">
+    <div class="join-grid">
+    <!-- Columna izquierda: textos y botón -->
+    <div class="join-left">
+    <h2 class="join-title">¿Querés unirte a<br>MolGen?</h2>
+    <p class="join-lead">
+        Te damos la oportunidad de participar del proyecto.
+        El próximo paso es completando el siguiente formulario.
+    </p>
+
+    <a href="#formulario" class="join-btn">Formulario</a>
+    </div>
+
+    <!-- Columna derecha: imagen grande -->
+    <div class="join-right">
+    <!-- Poné tu imagen en /public con este nombre exacto -->
+    <img src="public/community.png" alt="Comunidad MolGen" class="join-illustration" />
+    </div>
+</div>
+</section>
+
+
+<!-- ❓ Sección 5: FAQ -->
+<section class="faq" id="faq">
+    <div class="faq-inner">
+    <h2 class="faq-title">Respondemos tus dudas</h2>
+
+    <details class="faq-item">
+    <summary><span>Preguntas frecuentes</span></summary>
+
+    <div class="faq-content">
+    <ul class="faq-list">
+    <li>¿Con qué laboratorios están asociados?</li>
+    <li>¿Cuál es el límite de uso de la inteligencia artificial?</li>
+    <li>¿Qué habilidades necesito para participar del proyecto?</li>
+    </ul>
+</div>
+</details>
+
+
+    <details class="faq-item">
+    <summary><span>Contacto</span></summary>
+    <div class="faq-content">
+    <ul class="faq-list">
+        <li>Mail: michanieandre@gmail.com</li>
+        <li>Número de teléfono: 11 5749 1374</li>
+        <li>Dirección: Av. Alvear 101</li>
+    </ul>
+    </div>
+</details>
+
+    </details>
+</div>
+</section>
